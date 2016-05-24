@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ApiCall</string>
+    <string name="edit_text_hint">Search Images</string>
+</resources>
