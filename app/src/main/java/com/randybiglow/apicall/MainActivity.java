@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
-public class MainActivity extends AppCompatActivity implements PhotoServiceCallback{
+public class MainActivity extends AppCompatActivity implements PhotoCallback {
 
     private EditText mEditText;
     private ImageView mImageView;

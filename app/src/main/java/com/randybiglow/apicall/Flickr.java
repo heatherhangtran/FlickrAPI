@@ -14,7 +14,7 @@ import cz.msebera.android.httpclient.Header;
 public class Flickr {
 
     private static Flickr instance;
-    private static PhotoServiceCallback callback;
+    private static PhotoCallback callback;
     private String id, secret, server, farm;
     public String link;
 
@@ -22,7 +22,7 @@ public class Flickr {
     //Method needs to be empty.
     }
 
-    public static Flickr getInstance(PhotoServiceCallback call) {
+    public static Flickr getInstance(PhotoCallback call) {
         callback = call;
         if(instance == null) {
             instance = new Flickr();
