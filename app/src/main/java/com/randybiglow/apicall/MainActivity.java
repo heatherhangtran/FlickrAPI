@@ -49,12 +49,13 @@ public class MainActivity extends AppCompatActivity implements PhotoServiceCallb
             Toast.makeText(MainActivity.this, "What are you looking for?", Toast.LENGTH_LONG).show();
 
         } else {
-            FlickrService.getInstance(MainActivity.this).doRequest();
+            Flickr.getInstance(MainActivity.this).doRequest(input);
             mEditText.setText("");
+            mDialog.setMessage("Loading...");
+            mDialog.show();
         }
 
-        mDialog.setMessage("Loading...");
-        mDialog.show();
+        mDialog.hide();
 
         try {
             InputMethodManager hideKeyboard = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
