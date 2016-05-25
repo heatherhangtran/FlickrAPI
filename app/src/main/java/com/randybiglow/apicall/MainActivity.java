@@ -49,10 +49,11 @@ public class MainActivity extends AppCompatActivity implements PhotoCallback {
             Toast.makeText(MainActivity.this, "What are you looking for?", Toast.LENGTH_LONG).show();
 
         } else {
+            mDialog.setMessage("Loading " + input + "...");
+            mDialog.show();
             Flickr.getInstance(MainActivity.this).doRequest(input);
             mEditText.setText("");
-            mDialog.setMessage("Loading...");
-            mDialog.show();
+            //Toast.makeText(MainActivity.this, "Found this image for " + input + "." , Toast.LENGTH_SHORT).show();
         }
 
         mDialog.hide();

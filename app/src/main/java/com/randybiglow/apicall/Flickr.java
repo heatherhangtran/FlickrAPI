@@ -54,7 +54,7 @@ public class Flickr {
                             secret = somethingDifferent.getString("secret");
                             server = somethingDifferent.getString("server");
                             farm = somethingDifferent.getString("farm");
-                            photoResult = "https://farm"+farm+".staticflickr.com/"+server+"/"+id+"_"+secret+"_m.jpg";
+                            photoResult = "https://farm"+farm+".staticflickr.com/"+server+"/"+id+"_"+secret+"_z.jpg";
                         }catch (Exception e) {
                             e.printStackTrace();
                         }
